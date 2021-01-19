@@ -1,0 +1,32 @@
+html{
+    background-color: rgb(26, 71, 87);
+    color: white;
+}
+
+textarea{
+    resize: none;
+    height: 1.1em;
+    width: 250px;
+    overflow: hidden;
+    margin: 1em;
+}
+
+.row.texts{
+    display: flex;
+    justify-content: center;
+}
+
+.row.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: .5em;
+}
+
+span{
+    border-right: 2px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
