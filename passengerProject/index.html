@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<head>
+<meta charset='utf-8'>
+<meta name='author' content='Estrella Angel'>
+<meta name='description' content=''>
+<meta property='og:image' content=''>
+<meta property='og:description' content=''>
+<meta property='og:title' content=''>
+<title></title>
+<link rel='stylesheet' href='style.css'>
+<link rel='shortcut icon' href='' type='image/x-icon'>
+</head>
+<body>
+    <header>Title</header>
+    <div class="mainArea">
+    <div class="inputInfo">
+        <ul>
+            <li>First Name<textarea name="firstName" id="firstName" placeholder="First Name"></textarea></li>
+            <li>Last Name<textarea name="lastName" id="lastName" placeholder="Last Name"></textarea></li>
+            <li>Starting Point<textarea name="startingCity" id="startingCity" placeholder="City, State"></textarea></li>
+            <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State"></textarea></li>
+            <li>Baggage Count<input type="number" name="baggage" id="baggage"></li>
+            <li>
+                <legend>Food:</legend>
+                <ul>
+                    <li><label for="meal1"></label><input type="radio" id="meal1" name="meals">Chicken Sandwhich</li>
+                    <li><label for="meal2"></label><input type="radio" id="meal2" name="meals">Spagehti & Meatballs</li>
+                    <li><label for="meal3"></label><input type="radio" id="meal3" name="meals">Salmon</li>
+                    <li><label for="meal4"></label><input type="radio" id="meal4" name="meals">Salad</li>
+                </ul>
+            </li>
+            <li>
+                <legend>Extras:</legend>
+                <ul>
+                    <li><label for="extra1"></label><input type="checkbox" id="extra1" name="extras">Window Seat</li>
+                    <li><label for="extra2"></label><input type="checkbox" id="extra2" name="extras">Aisle Seat</li>
+                    <li><label for="extra3"></label><input type="checkbox" id="extra3" name="extras">Extra Leg Room</li>
+                    <li><label for="extra4"></label><input type="checkbox" id="extra1" name="extras">Headphones</li>
+                    <li><label for="extra5"></label><input type="checkbox" id="extra1" name="extras">Extra Food</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="listArea">
+        <div class="search">
+        <textarea name="searchList" id="searchList" placeholder="(First Name) (Last Name)"></textarea>
+        <button onclick="searchList()">Search</button>
+        </div>
+        <div class="list" id="list"></div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

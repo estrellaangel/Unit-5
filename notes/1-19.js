@@ -1,33 +1,33 @@
-//Extending a Class
-//You can create "child classes" where they have all the same properties of the parent class adn then you can define more
-//I.E. if you have an animal class you make a cat subclass
-    //They will share many properties with other animals but you can add a few that only cats have like lives
+// Extending a Class
+// You can create "child classes" where they have all the same properties of the parent class adn then you can define more
+// I.E. if you have an animal class you make a cat subclass
+//     They will share many properties with other animals but you can add a few that only cats have like lives
 
-                // EVERY CLASSS NEEDS CONSTRUCTOR
+//                 EVERY CLASSS NEEDS CONSTRUCTOR
 
-// class staff{
-//     constructor(name, id, age){ 
-//         this.name = name;
-//         this.id = id;
-//         this.age = age;
-//     }
-// }
+class staff{
+    constructor(name, id, age){ 
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
+}
 
-// class admin extends staff{
-//     set priviledge(acess){
-//         this.access = acess;
-//     }
-// }
+class admin extends staff{
+    set priviledge(acess){
+        this.access = acess;
+    }
+}
 
-// class intern extends staff{
-//     set leaveDate(date){
-//         this.date = date;
-//     }
-// }
+class intern extends staff{
+    set leaveDate(date){
+        this.date = date;
+    }
+}
 
-// let jimmy = new intern("Jimmy", 1224, 21);
-// jimmy.leaveDate = "3030";
-// console.log(jimmy);
+let jimmy = new intern("Jimmy", 1224, 21);
+jimmy.leaveDate = "3030";
+console.log(jimmy);
 
 //You are allowed to extend any expression you want including not just classes
 //This is not as common but sometimes you need to create a class using a function, now you can extend it
@@ -97,3 +97,27 @@ peter.stop();
                 //if left blank it is assumed1
             //Hours, minutes, seconds, ms
                 //all start at 0 and if they are left blank it is assumed 0;
+
+    //DATE METHODS
+    getFullYear()
+        //Get the year in 4 digits
+    getMonth()
+        //Get the month from 0 to 11
+    getDate()
+        //get the day of the month from 1 to 31
+    getHours, minutes, etc...
+    getDay()
+        //Will return the day of the week O(sunday) to 6(saturday)\
+    Date.now()
+        //Returns the current time on the decive rhat you are using
+        //This is the same as saying new Date().getTime() but saves your computer from creating a new date object
+
+
+    //AUTO CORRECTING
+
+        //The date object also auto corrects errors for you
+            let date = new Date(2013, 0, 32); // 32 January 2013
+            alert(date); //is 1st Feb 2013
+        //This is often used to find a time that is x minuted from the old time
+        
+
