@@ -17,8 +17,8 @@
     <div class="mainArea">
     <div class="inputInfo">
         <ul>
-            <li>First Name<textarea name="firstName" id="firstName" placeholder="First Name" class="texts"></textarea></li>
-            <li>Last Name<textarea name="lastName" id="lastName" placeholder="Last Name" class="texts"></textarea></li>
+            <li>First Name<textarea name="firstName" id="firstName" placeholder="First" class="texts"></textarea></li>
+            <li>Last Name<textarea name="lastName" id="lastName" placeholder="Last" class="texts"></textarea></li>
             <li>Starting Point<textarea name="startingCity" id="startingCity" placeholder="City, State" class="texts"></textarea></li>
             <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
             <li>Baggage Count:<input type="number" name="baggage" id="baggage"></li>
@@ -41,19 +41,19 @@
                     <li><label for="extra5"></label><input type="checkbox" id="extra1" name="extras"> Extra Food</li>
                 </ul>
             </li>
+            <li><button onclick="addPassenger()" id="passenger" class="passengerBtn">Enter Passenger</button></li>
         </ul>
     </div>
     <div class="listArea">
         <div class="categories">
             <p>Search for Passenger:</p>
-            <button>Name</button>
-            <button>Id</button>
+            <button onclick="searchByNameButton()">Name</button>
+            <button onclick="searchByIdButton()">Id</button>
         </div>
 
         <div class="search">
-        <textarea name="searchName" id="searchName" placeholder="First Last" class="searchName"></textarea>
-        <textarea name="searchId" id="searchId" placeholder="#" class="searchId"></textarea>
-        <button onclick="searchList()" class="searchButton">Search</button>
+        <textarea name="searchbar" id="searchbar" class="searchbar"></textarea>
+        <button onclick="searchList()" class="searchBtn" id="searchBtn">Search</button>
         </div>
         <div class="list" id="list"></div>
     </div>

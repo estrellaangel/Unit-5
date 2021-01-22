@@ -3,101 +3,121 @@
     padding: 0;
 }
 
-header{
-    display:flex;
-    justify-content: center;
-    justify-items: center;
-    margin: 30px;
-    font-size: 3em;
-}
+/* HEADER STUFF */
 
-.mainArea{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-div.inputInfo{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 30%;
-    text-align: center;
-}
+    header{
+        display:flex;
+        justify-content: center;
+        justify-items: center;
+        margin: 30px;
+        font-size: 3em;
+    }
 
 
-textarea{
-    resize: none;
-    height: 1.1em;
-    width: 90%;
-    overflow: hidden;
-}
+/* CONTENT */
+    .mainArea{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: row;
+    }
 
-div li input#baggage{
-    margin: .5rem;
-    max-height: 1rem;
-    max-width: 2rem;
-    text-align: center;
-}
+    ul{
+        list-style: none;
+    }
 
-.texts{
-    text-align: center;
-}
+    ul li{
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
 
-div.listArea{
-    width:60%;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
-}
-
-div.categories{
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-}
-
-div.search{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+    .hide{
+        display: none;
+    }
 
 
-div.search textarea.searchName{
-    width: 70%;
-}
+    /* INPUT SIDE */
+    div.inputInfo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 30%;
+        text-align: center;
+    }
 
-div.search textarea.searchId{
-    display: none;
-}
+    textarea{
+        resize: none;
+        height: 1.1em;
+        width: 90%;
+        overflow: hidden;
+    }
 
-.categories button{
-    width: 50px;
-}
+    div li input#baggage{
+        margin: .5rem;
+        max-height: 1rem;
+        max-width: 2rem;
+        text-align: center;
+    }
+
+    .texts{
+        text-align: center;
+    }
+
+    div ul li legend{
+        text-align: left;
+    }
+
+    ul li ul{
+        text-align: left;
+    }
+
+        /* ENTER PASSENGER BUTTON */
+        .passengerBtn{
+            margin: 10px;
+            width: 140px;
+        }
 
 
+    /* LIST AND SEARCH AREA */
 
-ul{
-    list-style: none;
-}
+    div.listArea{
+        width:60%;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
+    }
+        /* SEARCH TEXT AND BUTTONS ON SIDE */
+            div.categories{
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                margin-bottom: 20px;
+            }
 
-div ul li legend{
-    text-align: left;
-}
+            .categories button{
+            width: 50px;
+            height: 1.5rem;
+            }
 
-ul li{
-    margin-left: 15px;
-    margin-bottom: 5px;
-}
+        /* SEARCH BOXES */
+            div.search{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                text-align: right;
+            }
 
-ul li ul{
-    text-align: left;
-}
+            .searchBox{
+                width: 80%;
+                text-align: center;
+            }
 
-div.search button.searchButton{
-    width: 60px;
-}
+            /* SEARCH BUTTON */
+            div.search button.searchBtn{
+                width: 60px;
+            }
+
+        
