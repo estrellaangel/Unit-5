@@ -466,12 +466,27 @@ class User{
         }}
         if(num > 0 && pass.length >= 5){
             this.password = pass;
-        }}}
+        }}
+    }
 
 
 let user = new User();
 
-user.checkUserName = "eeea"
-user.checkPassword = "1243244"
+user.checkUserName = "cool"
+user.checkPassword = "real1"
 
 console.log(user);
+
+function login(obj, userN, pass){
+    if(obj.userName == userN && obj.password == pass){
+        console.log("login succesful");
+    }
+}
+
+login(user, "cool", "eijoe");
+
+//Extending a Class
+//You can create "child classes" where they have all the same properties of the parent class adn then you can define more
+//I.E. if you have an animal class you make a cat subclass
+    //They will share many properties with other animals but you can add a few that only cats have like lives
+

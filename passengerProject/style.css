@@ -1,0 +1,103 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 30px;
+    font-size: 3em;
+}
+
+.mainArea{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+div.inputInfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 30%;
+    text-align: center;
+}
+
+
+textarea{
+    resize: none;
+    height: 1.1em;
+    width: 90%;
+    overflow: hidden;
+}
+
+div li input#baggage{
+    margin: .5rem;
+    max-height: 1rem;
+    max-width: 2rem;
+    text-align: center;
+}
+
+.texts{
+    text-align: center;
+}
+
+div.listArea{
+    width:60%;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+div.categories{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+div.search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+div.search textarea.searchName{
+    width: 70%;
+}
+
+div.search textarea.searchId{
+    display: none;
+}
+
+.categories button{
+    width: 50px;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+div ul li legend{
+    text-align: left;
+}
+
+ul li{
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+ul li ul{
+    text-align: left;
+}
+
+div.search button.searchButton{
+    width: 60px;
+}
