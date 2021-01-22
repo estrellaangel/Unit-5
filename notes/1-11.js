@@ -360,49 +360,49 @@
 //     method3()
 // }
 
-// class Student {
-//     constructor(name, id, gradeLevel){
-//         this.name = name;
-//         this.id = id;
-//         this.gradeLevel = gradeLevel;
-//         this.permissions = "Student";
-//     }
-//     graduate(){
-//         this.gradeLevel++;
-//     }
-//     whiteList(){
-//         this.permissions = "Admin";
-//     }
-//     select(grade){
-//         this.currentGrade = grade;
-//     }
+class Student {
+    constructor(name, id, gradeLevel){
+        this.name = name;
+        this.id = id;
+        this.gradeLevel = gradeLevel;
+        this.permissions = "Student";
+    }
+    graduate(){
+        this.gradeLevel++;
+    }
+    whiteList(){
+        this.permissions = "Admin";
+    }
+    select(grade){
+        this.currentGrade = grade;
+    }
 
-// }
+}
 
-// let jimbo = new Student("Jimbo", 13, 6);
+let jimbo = new Student("Jimbo", 13, 6);
 
-// jimbo.select("B");
-// console.log(jimbo);
+jimbo.select("B");
+console.log(jimbo);
 
-// class User{
-//     constructor(){
-//         this.firstName = "Jimmy";
-//         this.lastName = "Smitty";
-//     }
+class User{
+    constructor(){
+        this.firstName = "Jimmy";
+        this.lastName = "Smitty";
+    }
 
-//     get fullName(){
-//         return  `${this.firstName} ${this.lastName}`;
-//     }
+    get fullName(){
+        return  `${this.firstName} ${this.lastName}`;
+    }
 
-//     set fullName(value){
-//         [this.firstName, this.lastName] = value.split(" ");
-//     }
-// }
+    set fullName(value){
+        [this.firstName, this.lastName] = value.split(" ");
+    }
+}
 
-// let user = new User()
+let user = new User()
 
-// user.fullName = "Arron Collis"
-// console.log(user.fullName);
+user.fullName = "Arron Collis"
+console.log(user.fullName);
 
 //class user
 //set userNam -> 4 letters
