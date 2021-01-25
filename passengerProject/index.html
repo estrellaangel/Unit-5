@@ -19,16 +19,19 @@
         <ul>
             <li>First Name<textarea name="firstName" id="firstName" placeholder="First" class="texts"></textarea></li>
             <li>Last Name<textarea name="lastName" id="lastName" placeholder="Last" class="texts"></textarea></li>
+            <li><label for="birthday">Birthday</label><input type="date" id="birthday" name="birthday"></li>
             <li>Starting Point<textarea name="startingCity" id="startingCity" placeholder="City, State" class="texts"></textarea></li>
+            <li><label for="startingDate">Leaving Date</label><input type="date" id="startingDate" name="startingDate"></li>
             <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
+            <li><label for="returningDate">Returning Date</label><input type="date" id="returningDate" name="returningDate"></li>
             <li>Baggage Count:<input type="number" name="baggage" id="baggage"></li>
             <li>
                 <legend>Food:</legend>
                 <ul>
-                    <li><label for="meal1"></label><input type="radio" id="meal1" name="meals"> Chicken Sandwhich</li>
-                    <li><label for="meal2"></label><input type="radio" id="meal2" name="meals"> Spagehti & Meatballs</li>
-                    <li><label for="meal3"></label><input type="radio" id="meal3" name="meals"> Salmon</li>
-                    <li><label for="meal4"></label><input type="radio" id="meal4" name="meals"> Salad</li>
+                    <li><label for="meal1"></label><input type="radio" id="meal1" name="meals" value="Chicken Sandwhich"> Chicken Sandwhich</li>
+                    <li><label for="meal2"></label><input type="radio" id="meal2" name="meals" value="Spagehti & Meatballs"> Spagehti & Meatballs</li>
+                    <li><label for="meal3"></label><input type="radio" id="meal3" name="meals" value="Salmon"> Salmon</li>
+                    <li><label for="meal4"></label><input type="radio" id="meal4" name="meals" value="Salad"> Salad</li>
                 </ul>
             </li>
             <li>
@@ -37,8 +40,8 @@
                     <li><label for="extra1"></label><input type="checkbox" id="extra1" name="extras"> Window Seat</li>
                     <li><label for="extra2"></label><input type="checkbox" id="extra2" name="extras"> Aisle Seat</li>
                     <li><label for="extra3"></label><input type="checkbox" id="extra3" name="extras"> Extra Leg Room</li>
-                    <li><label for="extra4"></label><input type="checkbox" id="extra1" name="extras"> Headphones</li>
-                    <li><label for="extra5"></label><input type="checkbox" id="extra1" name="extras"> Extra Food</li>
+                    <li><label for="extra4"></label><input type="checkbox" id="extra4" name="extras"> Headphones</li>
+                    <li><label for="extra5"></label><input type="checkbox" id="extra5" name="extras"> Extra Food</li>
                 </ul>
             </li>
             <li><button onclick="addPassenger()" id="passenger" class="passengerBtn">Enter Passenger</button></li>
