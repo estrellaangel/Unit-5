@@ -5,7 +5,7 @@ let searchBy = 0;
 // 0=NAME
 // 1=ID
 
-let numberID = 1;
+let numberID = 5;
 //Starting by 1 then every new passenger is added on
 
 let passengerNames = [];
@@ -41,7 +41,6 @@ function addPassenger(){
     }//Making last name and checking that there is a last name
 
     let BD = document.getElementById("birthday").value;
-    if(document.getElementById(`birthday`).value < )
     
     let SC = document.getElementById("startingCity").value;
     if(SC == ""){
@@ -87,10 +86,22 @@ function addPassenger(){
     var newPassenger = new Passenger(FN, LN, BD, SC, DD, EC, RD, M, E, B);
 
     passengerNames.push(newPassenger);
+
+    document.getElementById(`firstName`).value = "";
+    document.getElementById(`lastName`).value = "";
+    document.getElementById(`birthday`).value = "";
+    document.getElementById(`startingCity`).value = "";
+    document.getElementById(`startingDate`).value = "";
+    document.getElementById(`endingCity`).value = "";
+    document.getElementById(`returningDate`).value = "";
+    document.getElementById(`baggage`).value = "";
+    document.getElementById(`meal${M}`).checked = false;
+    for(let i = 0; i < E.length; i++){
+        document.getElementById(`extra${E[i]}`).checked = false;
+    };
     numberID++;
     console.log(passengerNames);
 }
-
 
 function searchByNameButton(){
     searchBy = 0;
@@ -99,3 +110,56 @@ function searchByNameButton(){
 function searchByIdButton(){
     searchBy = 1;
 }
+
+function showPasInfo(array, num){
+    document.getElementById("specPasInfo").classList.add("specificPassengerSearch");
+    document.getElementById("EditBtn").classList.remove("hide");
+    document.getElementById("closeBtn").classList.remove("hide");
+    document.getElementById(`pname`).innerHTML = `${array[num].firstName} ${array[num].lastName}`;
+    document.getElementById('pbirthday').innerHTML = `Birthday: ${array[num].birthday}`;
+    document.getElementById(`pID`).innerHTML = `ID: ${array[num].id}`;
+    document.getElementById(`pstartingCity`).innerHTML = `Starting City: ${array[num].startingCity}`;
+    document.getElementById(`pstartingDate`).innerHTML = `Leaving Date: ${array[num].departure}`;
+    document.getElementById(`preturnDate`).innerHTML = `Returning Date: ${array[num].returnDate}`;
+    document.getElementById(`pendingCity`).innerHTML = `Destination: ${array[num].endingCity}`;
+    document.getElementById(`pbaggage`).innerHTML = `Baggage Count: ${array[num].baggageN}`;
+}
+
+function close(){
+    document.getElementById("specPasInfo").classList.remove("specificPassengerSearch");
+    document.getElementById("EditBtn").classList.add("hide");
+    document.getElementById("closeBtn").classList.add("hide");
+
+}
+
+function searchList(){
+    //SEARCHING BY NAME
+        if(searchBy == 0){
+            let name = document.getElementById(`searchbar`).value;
+            let newArr = name.split(" ");
+            console.log(newArr.length);
+            if(newArr.length > 1){
+                for(let i = 0; i<passengerNames.length; i++){
+                    if(passengerNames[i].firstName == newArr[0] && passengerNames[i].lastName == newArr[1]){
+                    showPasInfo(passengerNames, i);
+                }}
+            }else{
+                alert(`Incorrect First or Last Name`);
+                return;
+            }
+        }
+    //SEARCHING BY ID
+        else{
+            let id = document.getElementById(`searchbar`).value;
+            for(let i=0; i<passengerNames.length; i++){
+                if(passengerNames[i].id == id){
+                    showPasInfo(passengerName, i);
+                }
+                else{
+                    alert(`Incorrect ID`);
+                    return;
+                }
+            };
+        }
+        document.getElementById(`searchbar`).value = "";
+    }

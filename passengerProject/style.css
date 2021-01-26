@@ -119,5 +119,15 @@
             div.search button.searchBtn{
                 width: 60px;
             }
-
+    
+    /* SPECIFIC PASSENGER INFO */
+    div.specificPassengerSearch{
+        position: absolute;
+        background-color: lightblue;
+        color: black;
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 40%;
+        margin-top: 15%;
+    }
         

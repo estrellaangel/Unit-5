@@ -22,8 +22,8 @@
             <li><label for="birthday">Birthday</label><input type="date" id="birthday" name="birthday"></li>
             <li>Starting Point<textarea name="startingCity" id="startingCity" placeholder="City, State" class="texts"></textarea></li>
             <li><label for="startingDate">Leaving Date</label><input type="date" id="startingDate" name="startingDate"></li>
-            <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
             <li><label for="returningDate">Returning Date</label><input type="date" id="returningDate" name="returningDate"></li>
+            <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
             <li>Baggage Count:<input type="number" name="baggage" id="baggage"></li>
             <li>
                 <legend>Food:</legend>
@@ -60,6 +60,21 @@
         </div>
         <div class="list" id="list"></div>
     </div>
+    </div>
+    <!-- Pop up passenger information -->
+    <div id="specPasInfo">
+        <a class="pname" id="pname"></a>
+        <a class="pbirthday" id="pbirthday"></a>
+        <a class="pID" id="pID"></a>
+        <a class="pstartingCity" id="pstartingCity"></a>
+        <a class="pstartingDate" id="pstartingDate"></a>
+        <a class="preturnDate" id="preturnDate"></a>
+        <a class="pendingCity" id="pendingCity"></a>
+        <a class="pbaggage" id="pbaggage"></a>
+        <a class="pmeal" id="pmeal"></a>
+        <a class="pextras" id="pextras"></a>
+        <button class="hide" onclick="close()" id="closeBtn">Close</button>
+        <button class="hide" id="editBtn">Edit</button>
     </div>
     <script src="script.js"></script>
 </body>
