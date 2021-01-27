@@ -110,7 +110,7 @@
                 text-align: right;
             }
 
-            .searchBox{
+            .searchbar{
                 width: 80%;
                 text-align: center;
             }
@@ -125,9 +125,27 @@
         position: absolute;
         background-color: lightblue;
         color: black;
-        margin-left: 15%;
-        margin-right: 15%;
+        width: 500px;
+        overflow: hidden;
+        top: 20%;
+        left: 30%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 30px;
         height: 40%;
-        margin-top: 15%;
     }
-        
+
+    div.specificPassengerSearch a.pname {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    div.specificPassengerSearch button{
+        width: 100px;
+        margin-left: 40%;
+    }
+
+    
+
