@@ -11,6 +11,8 @@
 <title></title>
 <link rel='stylesheet' href='style.css'>
 <link rel='shortcut icon' href='' type='image/x-icon'>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>Airline CO.</header>
@@ -19,10 +21,10 @@
         <ul>
             <li>First Name<textarea name="firstName" id="firstName" placeholder="First" class="texts"></textarea></li>
             <li>Last Name<textarea name="lastName" id="lastName" placeholder="Last" class="texts"></textarea></li>
-            <li><label for="birthday">Birthday</label><input type="date" id="birthday" name="birthday"></li>
+            <li><label for="birthday">Birthday </label><input type="date" id="birthday" name="birthday"></li>
             <li>Starting Point<textarea name="startingCity" id="startingCity" placeholder="City, State" class="texts"></textarea></li>
-            <li><label for="startingDate">Leaving Date</label><input type="date" id="startingDate" name="startingDate"></li>
-            <li><label for="returningDate">Returning Date</label><input type="date" id="returningDate" name="returningDate"></li>
+            <li><label for="startingDate">Leaving Date </label><input type="date" id="startingDate" name="startingDate"></li>
+            <li><label for="returningDate">Returning Date </label><input type="date" id="returningDate" name="returningDate"></li>
             <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
             <li>Baggage Count:<input type="number" name="baggage" id="baggage" min="0"></li>
             <li>
@@ -50,8 +52,8 @@
     <div class="listArea">
         <div class="categories">
             <p>Search for Passenger:</p>
-            <button onclick="searchByNameButton()">Name</button>
-            <button onclick="searchByIdButton()">Id</button>
+            <button id="nameBtn" class="nameBtn selectedBtn" onclick="searchByNameButton()">Name</button>
+            <button id="idBtn" class="idBtn" onclick="searchByIdButton()">Id</button>
         </div>
 
         <div class="search">
@@ -65,19 +67,20 @@
     <div id="specPasInfo">
         <a class="pname" id="pname"></a>
         <a class="pbirthday" id="pbirthday"></a>
-        <img src="over21.png" class="over21 image21" id="over21">
-        <img src="under21.png" class="under21 image21" id="under21">
         <a class="page" id="page"></a>
         <a class="pID" id="pID"></a>
+        <a class="idWarn" id="idWarn"></a>
         <a class="pstartingCity" id="pstartingCity"></a>
         <a class="pstartingDate" id="pstartingDate"></a>
         <a class="preturnDate" id="preturnDate"></a>
+        <a class="plenght" id="plength"></a>
         <a class="pendingCity" id="pendingCity"></a>
         <a class="pbaggage" id="pbaggage"></a>
         <a class="pmeal" id="pmeal"></a>
         <a class="pextras" id="pextras"></a>
+        <a class="pcost" id="pcost"></a>
         <button class="hide" onclick="closeBox()" id="closeBtn">Close</button>
-        <button class="hide" id="editBtn">Edit</button>
+        <!-- <button class="hide" id="editBtn">Edit</button> -->
     </div>
     <script src="script.js"></script>
 </body>
