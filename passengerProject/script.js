@@ -27,22 +27,6 @@ class Passenger{
         this.baggageN = baggageN
     }
     checkAge(){
-        // // let born = this.birthday;
-        // // let timeAge = Date.now() - born.getTime();
-        // // let timeBetween = new Date(timeAge);
-
-        // // this.age = Math.abs(timeBetween.getUTCFullYear()-1970);
-        // // if(this.age >= 21){
-        // //     this.drink = true;
-        // // }else{
-        // //     this.drink = false;
-        // // }
-        // // console.log(this.drink);
-        // let born = this.birthday;
-        // let month = new Date().getMonth;
-        // let day = new Date().getDate;
-        // let year = new Date().getUTCFullYear;
-
         let birth = new Date(this.birthday);
         let now = Date.now()
         let difference = now - birth.getTime()
@@ -148,7 +132,6 @@ function addPassenger(){
     let M = 0; //Stands for Meals
         for(let i = 1; i<=4; i++){
             if (document.getElementById(`meal${i}`).checked){
-                console.log(`Meal ${i} is checked`)
                 M = i;
                 break;
             }
@@ -162,7 +145,6 @@ function addPassenger(){
         for(let i = 1; i<=5; i++){
             if(document.getElementById(`extra${i}`).checked){
                 E.push(i);
-                console.log(`Extra ${i} is selected`)
             }
         }
         //This loop finds which Extra(s) are selected
@@ -174,7 +156,6 @@ function addPassenger(){
     newPassenger.checkAge();
     newPassenger.calcCost();
     newPassenger.calcTripLength();
-    console.log(newPassenger);
     passengerNames.push(newPassenger);
 
     document.getElementById(`firstName`).value = "";
@@ -265,7 +246,6 @@ function searchList(){
                 for(let i = 0; i<passengerNames.length; i++){
                     if(passengerNames[i].firstName == newArr[0] && passengerNames[i].lastName == newArr[1]){
                     showPasInfo(passengerNames, i);
-                    console.log("hello");
                 }}
             }else{
                 alert(`Incorrect First or Last Name`);
@@ -283,12 +263,10 @@ function searchList(){
                 }
             };
             if(found == 1){
+                document.getElementById(`searchbar`).value = "";
                 return;
             }else{
                 alert(`Wrong ID`);
             }
         }
-        document.getElementById(`searchbar`).value = "";
     }
-
-    console.log(passengerNames);

@@ -8,7 +8,7 @@
 <meta property='og:image' content=''>
 <meta property='og:description' content=''>
 <meta property='og:title' content=''>
-<title></title>
+<title>Airline CO</title>
 <link rel='stylesheet' href='style.css'>
 <link rel='shortcut icon' href='' type='image/x-icon'>
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,10 +26,10 @@
             <li><label for="startingDate">Leaving Date </label><input type="date" id="startingDate" name="startingDate"></li>
             <li><label for="returningDate">Returning Date </label><input type="date" id="returningDate" name="returningDate"></li>
             <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
-            <li>Baggage Count:<input type="number" name="baggage" id="baggage" min="0"></li>
+            <li>Baggage Count (10$ each):<input type="number" name="baggage" id="baggage" min="0"></li>
             <li>
                 <legend>Food:</legend>
-                <ul>
+                <ul class="mealSelect">
                     <li><label for="meal1"></label><input type="radio" id="meal1" name="meals" value="Chicken Sandwhich"> Chicken Sandwhich</li>
                     <li><label for="meal2"></label><input type="radio" id="meal2" name="meals" value="Spagehti & Meatballs"> Spagehti & Meatballs</li>
                     <li><label for="meal3"></label><input type="radio" id="meal3" name="meals" value="Salmon"> Salmon</li>
@@ -37,8 +37,8 @@
                 </ul>
             </li>
             <li>
-                <legend>Extras:</legend>
-                <ul>
+                <legend>Extras (+10$):</legend>
+                <ul class="extraSelect">
                     <li><label for="extra1"></label><input type="checkbox" id="extra1" name="extras"> Window Seat</li>
                     <li><label for="extra2"></label><input type="checkbox" id="extra2" name="extras"> Aisle Seat</li>
                     <li><label for="extra3"></label><input type="checkbox" id="extra3" name="extras"> Extra Leg Room</li>
@@ -61,8 +61,8 @@
         <button onclick="searchList()" class="searchBtn" id="searchBtn">Search</button>
         </div>
         <div class="list" id="list"></div>
-    </div>
-    </div>
+    
+    
     <!-- Pop up passenger information -->
     <div id="specPasInfo">
         <a class="pname" id="pname"></a>
@@ -81,6 +81,8 @@
         <a class="pcost" id="pcost"></a>
         <button class="hide" onclick="closeBox()" id="closeBtn">Close</button>
         <!-- <button class="hide" id="editBtn">Edit</button> -->
+    </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -10,12 +10,15 @@ html{
 
 /* HEADER STUFF */
 
-    header{
-        display:flex;
+    header {
+        display: flex;
         justify-content: center;
         justify-items: center;
         margin: 30px;
+        background-color: white;
+        margin-left: 35%;
         font-size: 3em;
+        margin-right: 35%;
     }
 
 
@@ -61,11 +64,22 @@ html{
         flex-wrap: nowrap;
         width: 30%;
         text-align: center;
+        color: white;
     }
 
     ul {
         list-style: none;
         background-color: #4E85BF;
+        padding: 10px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    ul.mealSelect{
+        padding: 10px;
+    }
+
+    ul.extraSelect{
         padding: 10px;
     }
 
@@ -108,25 +122,35 @@ html{
         width: 60%;
         background-color: #1E5E9E;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
         /* SEARCH TEXT AND BUTTONS ON SIDE */
-            div.categories{
-                width: 100%;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: space-evenly;
-                margin-bottom: 20px;
-            }
+        div.categories {
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #1E5E9E;
+            width: 100%;
+            display: flex;
+            font-weight: bolder;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
 
-            .categories button{
+        .categories button {
             width: 50px;
             height: 1.5rem;
-            }
+        }   
 
-            .selectedBtn{
-                background-color: rgb(56, 135, 187);
-            }
+        .selectedBtn {
+            background-color: #1E5E9E;
+            color: white;
+            border: .5px black solid;
+        }
 
         /* SEARCH BOXES */
             div.search{
@@ -134,13 +158,13 @@ html{
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                text-align: right;
+                width: 80%;
             }
 
             .searchbar {
                 width: 80%;
                 text-align: center;
-                height: 2em;
+                height: 1.7em;
             }
 
             /* SEARCH BUTTON */
@@ -150,24 +174,22 @@ html{
     
     /* SPECIFIC PASSENGER INFO */
     div.specificPassengerSearch{
-        position: absolute;
-        background-color: lightblue;
-        color: black;
-        width: 500px;
-        overflow: hidden;
-        top: 20%;
-        left: 30%;
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        padding: 30px;
-        height: 40%;
+    background-color: lightblue;
+    color: black;
+    width: 500px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px;
     }
 
     div.specificPassengerSearch a.pname {
         font-size: 2em;
         font-weight: bolder;
+        margin-bottom: 10px;
     }
 
     div.specificPassengerSearch a.idWarn{
@@ -177,36 +199,6 @@ html{
     div.specificPassengerSearch button{
         width: 100px;
         margin-left: 40%;
+        margin-top: 15px;
     }
 
-    
-
-    .categories button {
-        width: 50px;
-        height: 1.5rem;
-    }
-
-    div.categories {
-        background-color: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: #1E5E9E;
-        width: 100%;
-        display: flex;
-        font-weight: bolder;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        margin-bottom: 20px;
-    }
-
-    .selectedBtn {
-        background-color: #1E5E9E;
-        /* border: none; */
-        color: white;
-        border: .5px black solid;
-    }
-
-    .categories button {
-        width: 50px;
-        height: 1.5rem;
-    }
