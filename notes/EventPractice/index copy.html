@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<head>
+<meta charset='utf-8'>
+<meta name='author' content='Estrella Angel'>
+<meta name='description' content=''>
+<meta property='og:image' content=''>
+<meta property='og:description' content=''>
+<meta property='og:title' content=''>
+<title>Airline CO</title>
+<link rel='stylesheet' href='style.css'>
+<link rel='shortcut icon' href='' type='image/x-icon'>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>Airline CO.</header>
+    <div class="mainArea">
+    <div class="inputInfo">
+        <ul>
+            <li>First Name<textarea name="firstName" id="firstName" placeholder="First" class="texts"></textarea></li>
+            <li>Last Name<textarea name="lastName" id="lastName" placeholder="Last" class="texts"></textarea></li>
+            <li><label for="birthday">Birthday </label><input type="date" id="birthday" name="birthday"></li>
+            <li>Starting Point<textarea name="startingCity" id="startingCity" placeholder="City, State" class="texts"></textarea></li>
+            <li><label for="startingDate">Leaving Date </label><input type="date" id="startingDate" name="startingDate"></li>
+            <li><label for="returningDate">Returning Date </label><input type="date" id="returningDate" name="returningDate"></li>
+            <li>Destination<textarea name="endingCity" id="endingCity" placeholder="City, State" class="texts"></textarea></li>
+            <li>Baggage Count (10$ each):<input type="number" name="baggage" id="baggage" min="0"></li>
+            <li>
+                <legend>Food:</legend>
+                <ul class="mealSelect">
+                    <li><label for="meal1"></label><input type="radio" id="meal1" name="meals" value="Chicken Sandwhich"> Chicken Sandwhich</li>
+                    <li><label for="meal2"></label><input type="radio" id="meal2" name="meals" value="Spagehti & Meatballs"> Spagehti & Meatballs</li>
+                    <li><label for="meal3"></label><input type="radio" id="meal3" name="meals" value="Salmon"> Salmon</li>
+                    <li><label for="meal4"></label><input type="radio" id="meal4" name="meals" value="Salad"> Salad</li>
+                </ul>
+            </li>
+            <li>
+                <legend>Extras (+10$):</legend>
+                <ul class="extraSelect">
+                    <li><label for="extra1"></label><input type="checkbox" id="extra1" name="extras"> Window Seat</li>
+                    <li><label for="extra2"></label><input type="checkbox" id="extra2" name="extras"> Aisle Seat</li>
+                    <li><label for="extra3"></label><input type="checkbox" id="extra3" name="extras"> Extra Leg Room</li>
+                    <li><label for="extra4"></label><input type="checkbox" id="extra4" name="extras"> Headphones</li>
+                    <li><label for="extra5"></label><input type="checkbox" id="extra5" name="extras"> Extra Food</li>
+                </ul>
+            </li>
+            <li><button onclick="addPassenger()" id="passenger" class="passengerBtn">Enter Passenger</button></li>
+        </ul>
+    </div>
+    <div class="listArea">
+        <div class="categories">
+            <p>Search for Passenger:</p>
+            <button id="nameBtn" class="nameBtn selectedBtn" onclick="searchByNameButton()">Name</button>
+            <button id="idBtn" class="idBtn" onclick="searchByIdButton()">Id</button>
+        </div>
+
+        <div class="search">
+        <textarea name="searchbar" id="searchbar" class="searchbar" placeholder="*Case Sensitive"></textarea>
+        <button onclick="searchList()" class="searchBtn" id="searchBtn">Search</button>
+        </div>
+        <div class="list" id="list"></div>
+    
+    
+    <!-- Pop up passenger information -->
+    <div id="specPasInfo">
+        <a class="pname" id="pname"></a>
+        <a class="pbirthday" id="pbirthday"></a>
+        <a class="page" id="page"></a>
+        <a class="pID" id="pID"></a>
+        <a class="idWarn" id="idWarn"></a>
+        <a class="pstartingCity" id="pstartingCity"></a>
+        <a class="pstartingDate" id="pstartingDate"></a>
+        <a class="preturnDate" id="preturnDate"></a>
+        <a class="plenght" id="plength"></a>
+        <a class="pendingCity" id="pendingCity"></a>
+        <a class="pbaggage" id="pbaggage"></a>
+        <a class="pmeal" id="pmeal"></a>
+        <a class="pextras" id="pextras"></a>
+        <a class="pcost" id="pcost"></a>
+        <button class="hide" onclick="closeBox()" id="closeBtn">Close</button>
+        <!-- <button class="hide" id="editBtn">Edit</button> -->
+    </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

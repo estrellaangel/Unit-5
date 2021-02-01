@@ -1,0 +1,14 @@
+
+div{
+    width: 100px;
+    height: 100px;
+    border: 2px grey solid;
+    background-color: white;
+    transition: 1s all;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(15, 100px);
+    grid-template-rows: repeat(8, 100px);
+}

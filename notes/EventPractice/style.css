@@ -1,0 +1,39 @@
+/* 
+
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+header{
+    text-align: center;
+}
+.words{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 10px;
+    width: 100%
+}
+
+#display{
+    height: 50px;
+    margin-top: 10px;
+}
+
+div{
+    margin-top: 20px;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+}
+
+p{
+    margin: 1px;
+    color: lightslategray;
+} */
+
