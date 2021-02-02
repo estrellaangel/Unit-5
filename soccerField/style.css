@@ -1,0 +1,27 @@
+#field{
+    height: 90vh;
+    width: 90vw;
+
+    border: white 10px solid;
+    position: relative;
+    overflow: hidden;
+    background-color: limegreen;
+    cursor: URL("FirstCustomCurser.png"), pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-color: limegreen;
+}
+
+#ball{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    transition: all .5s;
+}

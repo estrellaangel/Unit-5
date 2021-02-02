@@ -12,3 +12,7 @@ div{
     grid-template-columns: repeat(15, 100px);
     grid-template-rows: repeat(8, 100px);
 }
+
+div{
+    cursor: URL("FirstCustomCurser.png"), pointer;
+}

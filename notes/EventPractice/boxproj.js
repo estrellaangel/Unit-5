@@ -1,5 +1,5 @@
 let hover = function(){
-    this.style.background ="red";
+    this.style.background ="blue";
     }
 
 let makeWhite = function(){
@@ -7,9 +7,13 @@ let makeWhite = function(){
     }
 
 let makeGreen = function(){
-    this.style.background = "green"
+    this.style.background = "lightgreen"
     this.removeEventListener(`mouseover`, hover);
     this.removeEventListener(`mouseleave`, makeWhite);
+}
+
+let cursuer = function(){
+    this.style.background = 'blue';
 }
 
 for(let i = 0; i<105; i++){
