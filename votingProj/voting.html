@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<head>
+<meta charset='utf-8'>
+<meta name='author' content='Estrella Angel'>
+<meta name='description' content=''>
+<meta property='og:image' content=''>
+<meta property='og:description' content=''>
+<meta property='og:title' content=''>
+<title>Cast Vote</title>
+<link rel='stylesheet' href='voting.css'>
+<link rel='shortcut icon' href='' type='image/x-icon'>
+</head>
+<body>
+
+    <div>
+        <img src="Images/ballot box.png" class="ballotBox">
+    </div>
+
+    <div class="castVote" id="castVote">
+        <div class="castVoteTitle">Cast Vote</div>
+        <ul>
+            <li>Name:<input type="text" id="name" placeholder="First Last"><li>
+            <li>DOB: <input type="date" id="DOB" class="DOB"></li>
+            <li><input type="radio" id="voteForRichard" name="vote">Richard Nixon (Republican)</li>
+            <li><input type="radio" id="voteForHubert" name="vote">Hubert Humphrey (Democrat)</li>
+        </ul>
+        <button id="castVoteBtn" class="castVoteBtn">Cast Vote</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
