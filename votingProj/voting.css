@@ -1,15 +1,52 @@
 body{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 50px;
     align-items: center;
+    text-align: center;
     justify-content: center;
+    background-color: rgb(153, 185, 255);
+}
+
+.topInst{
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions{
+    font-size: 2rem;
+    margin-top: 50px;
+}
+
+.changeVote{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.ballotBox{
+    width: 400px;
+    height: 225px;
+}
+
+.ballot{
+    width: 200px;
+    height: 107.5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
 }
 
 div.castVote{
+    text-align: left;
     position: fixed;
     top: 20%;
-    left: 40%;
+    left: 39%;
     display: flex;
     padding: 20px;
     width: 300px;
@@ -39,7 +76,3 @@ button.castVoteBtn{
     margin-left: auto;
 }
 
-.ballotBox{
-    margin-top: 300px;
-    width: 400px;
-}
