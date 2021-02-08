@@ -9,21 +9,25 @@ let hide = function(){
         }
 }
 castVoteBtn.addEventListener(`click`, hide);
-
 let moveBallot = function(){
-    let ballotLeft = ballot.style.left;
-    let ballotTop = ballot.style.top;
-
+    let ballotBox = {
+        top: 400,
+        left: 572,
+    }
     ballot.style.left = (event.clientX - 100) + `px`;
     ballot.style.top = (event.clientY - 50) + `px`;
+    // console.log(event.clientX - ballotBox.left);
+    if((event.clientX - ballotBox.left) >= -10){
+        // console.log("go");
+    }
+    console.log(event.clientX - ballotBox.left - 400)
+    if((event.clientX - ballotBox.left - 400) <= 10 && (event.clientX - ballotBox.left - 400) > 0){
+        console.log("go");
+    }
 
-
+    // if((ballot.style.top))
     // ballotLeft.split("px");
-
     // ballotTop.replace("px", "");
-
-    console.log(ballotLeft, ballotTop)
-    
     // if(ballot)
     // if(ballot.style.top - 10 == ballotBox.style.top){
     //     for(ballot; ballot.style.top + 10 < ballotBox.style.top;){
